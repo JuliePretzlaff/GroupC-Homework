@@ -12,14 +12,29 @@ namespace GroupCSharpHomeWork
         {
             BeachResult beachOne = new BeachResult();
             Hotel hotelOne = new Hotel();
+            Car carOne = new Car();
+            Travel travelOne = new Travel();
 
             Console.WriteLine("Please enter your eye color as one of the following:  blue, green, brown.");
-            string beach = (beachOne.NumberToBeach(beachOne.ColorToNumber(Console.ReadLine().ToLower())));
-            Console.WriteLine(beach);
+            string eyeColor = Console.ReadLine().ToLower();
+            
+            string eyeNumber = beachOne.ColorToNumber(eyeColor);
 
-            Console.WriteLine("\nWhat is your shoe size?");
-            double size = double.Parse(Console.ReadLine());
-            Console.WriteLine(hotelOne.HotelChoice(beach, size));
+            int intNum = int.Parse(eyeNumber);
+
+            //Console.WriteLine(eyeNumber);
+
+            Console.WriteLine(beachOne.NumberToBeach(eyeNumber));
+            
+            Console.WriteLine(hotelOne.ColorToNumber(eyeColor));
+
+            Console.WriteLine("Please tell me agian your shoe size?");
+
+            double shoeNumber = double.Parse(Console.ReadLine());
+            double total = carOne.Addition(intNum, shoeNumber);
+
+            Console.WriteLine(travelOne.CarChoice(total));
+
         }
     }
 }

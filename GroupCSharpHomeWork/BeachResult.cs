@@ -8,41 +8,41 @@ namespace GroupCSharpHomeWork
 {
     public class BeachResult :Travel
     {
-        public override int ColorToNumber(string color)
+        public override string ColorToNumber(string color)
         {
             switch (color)
             {
                 case "blue":
-                    return 1;
+                    return "1";
                     break;
 
                 case "green":
-                    return 2;
+                    return "2";
                     break;
 
                 case "brown":
-                    return 3;
+                    return "3";
                     break;
 
                 default:
-                    return 4;
+                    return "4";
                     break;
             }
 
         }
 
-        public string NumberToBeach(int number)
+        public string NumberToBeach(string number)
         {
             switch (number)
             {
-                case 1:
+                case "1":
                     return "You're going to Tahiti!";
                     break;
-                case 2:
+                case "2":
                     return "You're going to Zanzibar!";
                     break;
 
-                case 3:
+                case "3":
                     return "You're going to California!";
                     break;
 
